@@ -1,0 +1,251 @@
+<html>
+
+<head>
+
+    <title>AI Video Surveillance</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+
+    <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <center>
+            <h3 style="color: red;">Case Study-Difference Between Google Lens and MobileNet</h3>
+            
+            <h3>Google Lens <img src="glens.png" id="glensimg"></h3>
+            
+            <h3>VS</h3>
+            
+            <h3 class="btn btn-info">MobileNet</h3>
+            <br><br>
+            <ol>
+                <div class="imgandresult col-xs-12">
+                    <li class="col-sm-4 col-xs-12">
+                        <b>Test image-</b>
+                        <img src="mug.jpg" class="img-responsive">
+
+                    </li>
+                    <h5 class="col-sm-4 col-xs-12">
+                        Output of <b>Google Lens</b>-
+                        <span>Mug</span>
+                    </h5>
+                    <h5 class="col-sm-4 col-xs-12">
+                        Output of <b>MobileNet</b>-
+                        <span>Mug</span>
+                    </h5>
+                    <div class="mini_result col-xs-12">
+                        <h4>Result-</h4>
+                        <hr>
+                        <h4>Draw</h4>
+                    </div>
+                </div>
+
+
+                <div class="imgandresult col-xs-12">
+                    <li class="col-sm-4 col-xs-12">
+                        <b>Test image-</b>
+                        <img src="applephone.jpg" class="img-responsive">
+
+                    </li>
+                    <h5 class="col-sm-4 col-xs-12">
+                        Output of <b>Google Lens</b>-
+                        <span>Apple Iphone-Iphone 12</span>
+                    </h5>
+                    <h5 class="col-sm-4 col-xs-12">
+                        Output of <b>MobileNet</b>-
+                        <span>Phone</span>
+                    </h5>
+                    <div class="mini_result col-xs-12">
+                        <h4>Result-</h4>
+                        <hr>
+                        <h4>Google Lens is more specific, but both are correct</h4>
+                    </div>
+                </div>
+
+                <div class="imgandresult col-xs-12">
+                    <li class="col-sm-4 col-xs-12">
+                        <b>Test image-</b>
+                        <img src="clearpencilpouch.jpg" class="img-responsive">
+
+                    </li>
+                    <h5 class="col-sm-4 col-xs-12">
+                        Output of <b>Google Lens</b>-
+                        <span>Clear Pencil Pouch</span>
+                    </h5>
+                    <h5 class="col-sm-4 col-xs-12">
+                        Output of <b>MobileNet</b>-
+                        <span>N/A</span>
+                    </h5>
+                    <div class="mini_result col-xs-12">
+                        <h4>Result-</h4>
+                        <hr>
+                        <h4>Google Lens is more accurate</h4>
+                    </div>
+                </div>
+
+                <div class="imgandresult col-xs-12">
+                    <li class="col-sm-4 col-xs-12">
+                        <b>Test image-</b>
+                        <img src="fastrackwatches.jpg" class="img-responsive">
+
+                    </li>
+                    <h5 class="col-sm-4 col-xs-12">
+                        Output of <b>Google Lens</b>-
+                        <span>FastTrack Watch Case</span>
+                    </h5>
+                    <h5 class="col-sm-4 col-xs-12">
+                        Output of <b>MobileNet</b>-
+                        <span>N/A</span>
+                    </h5>
+                    <div class="mini_result col-xs-12">
+                        <h4>Result-</h4>
+                        <hr>
+                        <h4>Google Lens is more accurate</h4>
+                    </div>
+                </div>
+                <div class="imgandresult col-xs-12">
+                    <li class="col-sm-4 col-xs-12">
+                        <b>Test image-</b>
+                        <img src="keyboard.jpg" class="img-responsive">
+
+                    </li>
+                    <h5 class="col-sm-4 col-xs-12">
+                        Output of <b>Google Lens</b>-
+                        <span>Office Keyboard</span>
+                    </h5>
+                    <h5 class="col-sm-4 col-xs-12">
+                        Output of <b>MobileNet</b>-
+                        <span>Keyboard</span>
+                    </h5>
+                    <div class="mini_result col-xs-12">
+                        <h4>Result-</h4>
+                        <hr>
+                        <h4>Both are correct, but Google Lens is more specific</h4>
+                    </div>
+                </div>
+
+                <div class="imgandresult col-xs-12">
+                    <li class="col-sm-4 col-xs-12">
+                        <b>Test image-</b>
+                        <img src="mouse.jpg" class="img-responsive">
+
+                    </li>
+                    <h5 class="col-sm-4 col-xs-12">
+                        Output of <b>Google Lens</b>-
+                        <span>Wireless Mouse HP 150 Black</span>
+                    </h5>
+                    <h5 class="col-sm-4 col-xs-12">
+                        Output of <b>MobileNet</b>-
+                        <span>Mouse</span>
+                    </h5>
+                    <div class="mini_result col-xs-12">
+                        <h4>Result-</h4>
+                        <hr>
+                        <h4>Both are correct but Google Lens is more specififc</h4>
+                    </div>
+                </div>
+
+                <div class="imgandresult col-xs-12">
+                    <li class="col-sm-4 col-xs-12">
+                        <b>Test image-</b>
+                        <img src="paperclip.jpg" class="img-responsive">
+
+                    </li>
+                    <h5 class="col-sm-4 col-xs-12">
+                        Output of <b>Google Lens</b>-
+                        <span>Acco Binder Clip</span>
+                    </h5>
+                    <h5 class="col-sm-4 col-xs-12">
+                        Output of <b>MobileNet</b>-
+                        <span>Paperclip</span>
+                    </h5>
+                    <div class="mini_result col-xs-12">
+                        <h4>Result-</h4>
+                        <hr>
+                        <h4>Both are correct,but Google Lens is more specific</h4>
+                    </div>
+                </div>
+
+                <div class="imgandresult col-xs-12">
+                    <li class="col-sm-4 col-xs-12">
+                        <b>Test image-</b>
+                        <img src="pen.jpg" class="img-responsive">
+
+                    </li>
+                    <h5 class="col-sm-4 col-xs-12">
+                        Output of <b>Google Lens</b>-
+                        <span>Flair Carbonix Li Blue</span>
+                    </h5>
+                    <h5 class="col-sm-4 col-xs-12">
+                        Output of <b>MobileNet</b>-
+                        <span>Pen</span>
+                    </h5>
+                    <div class="mini_result col-xs-12">
+                        <h4>Result-</h4>
+                        <hr>
+                        <h4>Both are correct but Google Lens is more specific</h4>
+                    </div>
+                </div>
+                <div class="imgandresult col-xs-12">
+                    <li class="col-sm-4 col-xs-12">
+                        <b>Test image-</b>
+                        <img src="pillow.jpg" class="img-responsive">
+
+                    </li>
+                    <h5 class="col-sm-4 col-xs-12">
+                        Output of <b>Google Lens</b>-
+                        <span>2G Lipov Polštář Aloe vera</span>
+                    </h5>
+                    <h5 class="col-sm-4 col-xs-12">
+                        Output of <b>MobileNet</b>-
+                        <span>Pillow</span>
+                    </h5>
+                    <div class="mini_result col-xs-12">
+                        <h4>Result-</h4>
+                        <hr>
+                        <h4>MobileNet is more accurate</h4>
+                    </div>
+                </div>
+                <div class="imgandresult col-xs-12">
+                    <li class="col-sm-4 col-xs-12">
+                        <b>Test image-</b>
+                        <img src="scissors.jpg" class="img-responsive">
+
+                    </li>
+                    <h5 class="col-sm-4 col-xs-12">
+                        Output of <b>Google Lens</b>-
+                        <span>Panache All Purpose Easy Grip Scissor</span>
+                    </h5>
+                    <h5 class="col-sm-4 col-xs-12">
+                        Output of <b>MobileNet</b>-
+                        <span>Scissors</span>
+                    </h5>
+                    <div class="mini_result col-xs-12">
+                        <h4>Result-</h4>
+                        <hr>
+                        <h4>Both are correct, but Google Lens is more specific</h4>
+                    </div>
+                </div>
+                
+
+
+
+
+
+
+
+            </ol>
+            <p>Overall,the results from Google Lens and MoblieNet on the same images show that Google Lens is more accurate and specific in terms of identifying objects than MobieNet is;even though Mobilenet was still technically accurate most of the time, it was relatively less specific on what each object was.</p>
+        </center>
+    </div>
+</body>
+
+</html>
